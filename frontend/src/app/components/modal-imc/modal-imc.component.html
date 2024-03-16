@@ -1,0 +1,23 @@
+<div class="modal-dialog modal-lg">
+  <div class="modal-content">
+    <div class="modal-header bg-primary text-white">
+      <h4 class="modal-title">Calculo do IMC</h4>
+    </div>
+    <div class="modal-body">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p><strong>Nome:</strong> {{ pessoa.nome }} kg</p>
+            <p><strong>Peso:</strong> {{ pessoa.peso }} kg</p>
+            <p><strong>Altura:</strong> {{ pessoa.altura }} cm</p>
+            <p><strong>IMC:</strong> {{ imc | number: '1.2-2' }}</p>
+            <p>{{ status }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" (click)="fecharModal()">Fechar</button>
+    </div>
+  </div>
+</div>
